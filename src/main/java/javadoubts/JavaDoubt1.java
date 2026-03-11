@@ -1,4 +1,4 @@
-package com.javadoubts;
+package javadoubts;
 
 public class JavaDoubt1 {
     public static void main(String[] args) {

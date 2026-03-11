@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
@@ -25,7 +24,7 @@ public class BrokenLinks {
 
         for (WebElement element : urls){
             String url = element.getAttribute("href");
-            HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection();
+            HttpURLConnection con = (HttpURLConnection) new URL(url).openConnection(); // or HttpURLConnection con = (HttpURLConnection) new URI(url).toURL().openConnection();
             con.setRequestMethod("HEAD");
             con.connect();
             int responseCode = con.getResponseCode();

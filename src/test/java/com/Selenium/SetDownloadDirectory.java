@@ -8,15 +8,15 @@ import org.testng.annotations.Test;
 import java.time.Duration;
 import java.util.HashMap;
 
-public class ChangeDirectoryToDownloadFile {
+public class SetDownloadDirectory {
     @Test
     public void systemDefaultDirectory() {
         ChromeOptions options = new ChromeOptions();
         HashMap<String, Object> prefs = new HashMap<>();
         prefs.put("download.default_directory", "C:\\Users\\280713\\Documents");
-        prefs.put("download.prompt_for_download", false);
-        prefs.put("download.directory_upgrade", true);
-        prefs.put("safebrowsing.enabled", true);
+//        prefs.put("download.prompt_for_download", false);
+//        prefs.put("download.directory_upgrade", true);
+//        prefs.put("safebrowsing.enabled", true);
         options.setExperimentalOption("prefs", prefs);
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
@@ -31,7 +31,7 @@ public class ChangeDirectoryToDownloadFile {
         ChromeOptions options = new ChromeOptions();
         HashMap<String, Object> prefs = new HashMap<>();
         prefs.put("download.default_directory", downloadPath);
-        prefs.put("download.prompt_for_download", false);
+//        prefs.put("download.prompt_for_download", false);
         options.setExperimentalOption("prefs", prefs);
         WebDriver driver = new ChromeDriver(options);
         driver.manage().window().maximize();
