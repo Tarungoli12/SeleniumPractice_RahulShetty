@@ -4,6 +4,7 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
+
 import java.time.Duration;
 import java.util.function.Function;
 
@@ -21,13 +22,14 @@ public class WaitExampleFluent<W extends SearchContext> {
 
         WebElement foo = wait.until(new Function<WebDriver, WebElement>() {
             public WebElement apply(WebDriver driver) {
-                if (driver.findElement(By.cssSelector("[id='finish'] h4")).isDisplayed()){
+                if (driver.findElement(By.cssSelector("[id='finish'] h4")).isDisplayed()) {
                     return driver.findElement(By.cssSelector("[id='finish'] h4"));
-                }else{
+                } else {
                     return null;
                 }
             }
         });
+
         System.out.println(driver.findElement(By.cssSelector("[id='finish'] h4")).getText());
     }
 }

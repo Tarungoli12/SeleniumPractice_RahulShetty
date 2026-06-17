@@ -7,6 +7,5 @@ public abstract class ParentAirCraft {
     public void safetyGuidelines(){
         System.out.println("Follow safety guidelines");
     }
-
     public abstract void planeColour();
 }

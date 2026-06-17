@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class Alert1 {
     public static void main(String[] args) {
-        String text="Rahul";
+        String text = "Rahul";
 
         WebDriver driver = new ChromeDriver();
 
